@@ -1,6 +1,7 @@
 //здесь подключаются все библиотеки
 
 import './js/common' //possible without filename extension, webpack understand 
+import './css/main.css' 
 
 /* 3 ways to add external .js files: 
 1. import 'vue'   
