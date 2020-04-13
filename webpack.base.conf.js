@@ -25,9 +25,6 @@ module.exports = {
             ], //помогает разделить css и js
         }]
     },
-    devServer: {
-        overlay: true //shows errors not in console, but in browser screen, black background, red letters on error place
-    }, 
     plugins: [
         new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
