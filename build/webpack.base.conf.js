@@ -32,10 +32,17 @@ module.exports = {
             test: /\.js$/, //parameters
             loader:  'babel-loader', //all .js files handle with this loader
             exclude: '/node_modules/' //for speeding compilation, exclude several files(many libraries are already processed with babel)
-        }, { //array with objects
+        }, { 
             test: /\.(png|jpg|gif|svg)$/, 
             loader:  'file-loader', //all .img files handle with this loader
             options: {
+                name: '[name].[ext]'
+            }
+        },  { 
+            test: /\.(mp3)$/, 
+            loader:  'file-loader', //all .img files handle with this loader
+            options: {
+                outputPath: 'audio',
                 name: '[name].[ext]'
             }
         }, {
@@ -58,7 +65,8 @@ module.exports = {
             filename: './index.html'
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/img`, to:  `${PATHS.assets}img` }
+            { from: `${PATHS.src}/img`, to:  `${PATHS.assets}img` },
+            { from: `${PATHS.src}/audio`, to:  `${PATHS.assets}audio` }
         ])
     ],
 }

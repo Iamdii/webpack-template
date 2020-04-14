@@ -6,7 +6,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
     devServer: {
         contentBase:  baseWebpackConfig.externals.paths.dist, //отвечает за то, где будет открываться вебпак
-        port: 8084, //по дефолту 8080, так как иногда работаем со вторым сервером, слушает сервер 8080, если он занят - будет ошибка
+        port: 8087, //по дефолту 8080, так как иногда работаем со вторым сервером, слушает сервер 8080, если он занят - будет ошибка
         overlay: { //shows errors not in console, but in browser screen, black background, red letters on error place
             warnings: true,
             errors: true
